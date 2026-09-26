@@ -50,7 +50,7 @@ body {
   background: var(--light-bg);
   color: var(--text);
   transition: background var(--transition), color var(--transition);
-  direction: rtl;
+  direction: ltr;
   line-height: 1.7;
 }
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عبد الرحمن غزال — مطور Flutter</title>
-  <meta name="description" content="بورتفوليو مطور تطبيقات موبايل Flutter" />
+  <title>Abd Alrhman Ghazal — Flutter Developer</title>
+  <meta name="description" content="Portfolio of a Flutter mobile app developer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
@@ -49,7 +49,6 @@
     #projectsList { display: flex; flex-direction: column; gap: 3rem; }
     .project-row {
       display: flex; align-items: center; gap: 2.5rem;
-      direction: ltr; /* keeps the phone physically on the left regardless of page direction */
       background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
       box-shadow: var(--shadow); padding: 2rem;
     }
@@ -69,24 +68,24 @@
     }
     .phone-screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .phone-placeholder { font-size: 3.5rem; }
-    .project-info { direction: rtl; text-align: right; flex: 1 1 auto; min-width: 0; }
+    .project-info { text-align: left; flex: 1 1 auto; min-width: 0; }
     .project-info h3 { font-weight: 900; font-size: 1.25rem; margin-bottom: 0.5rem; }
     .project-info p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0.9rem; line-height: 1.8; }
     .feature-list { list-style: none; margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
-    .feature-list li { font-size: 0.87rem; color: var(--text); padding-right: 1.3rem; position: relative; }
-    .feature-list li::before { content: '✓'; position: absolute; right: 0; color: var(--primary); font-weight: 900; }
+    .feature-list li { font-size: 0.87rem; color: var(--text); padding-left: 1.3rem; position: relative; }
+    .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: 900; }
 
     @media (max-width: 767px) {
-      .project-row { flex-direction: column; direction: rtl; padding: 1.5rem; }
+      .project-row { flex-direction: column; padding: 1.5rem; }
       .project-info { text-align: center; }
       .project-info .proj-tags { justify-content: center; }
-      .feature-list { align-items: flex-start; text-align: right; margin: 0 auto 1rem; width: fit-content; }
+      .feature-list { align-items: flex-start; text-align: left; margin: 0 auto 1rem; width: fit-content; }
     }
 
-    .timeline { position: relative; padding-right: 2rem; }
-    .timeline::before { content:''; position:absolute; top:0; bottom:0; right:8px; width:2px; background: var(--border); }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before { content:''; position:absolute; top:0; bottom:0; left:8px; width:2px; background: var(--border); }
     .tl-item { position: relative; margin-bottom: 1.8rem; }
-    .tl-dot { position:absolute; right:-2rem; top:4px; width:18px; height:18px; border-radius:50%; background: var(--primary); border:3px solid var(--card-bg); box-shadow:0 0 0 2px var(--primary); }
+    .tl-dot { position:absolute; left:-2rem; top:4px; width:18px; height:18px; border-radius:50%; background: var(--primary); border:3px solid var(--card-bg); box-shadow:0 0 0 2px var(--primary); }
     .tl-date { font-size:0.78rem; color: var(--text-muted); font-weight:700; margin-bottom:0.25rem; }
     .tl-title { font-weight:900; margin-bottom:0.2rem; }
     .tl-sub { font-size:0.87rem; color: var(--text-muted); }
@@ -101,19 +100,19 @@
 <!-- Navbar: single-page anchors only -->
 <nav class="navbar navbar-expand-lg main-navbar sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#top">📱 عبد الرحمن غزال</a>
+    <a class="navbar-brand" href="#top">📱 Abd Alrhman Ghazal</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#about">نبذة عني</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">المهارات</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">المشاريع</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">المسيرة المهنية</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معي</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <button class="dark-toggle" id="darkToggle">🌙 وضع داكن</button>
+      <button class="dark-toggle" id="darkToggle">🌙 Dark Mode</button>
     </div>
   </div>
 </nav>
@@ -122,12 +121,12 @@
 <header class="profile-hero" id="top">
   <div class="container">
     <div class="avatar">📱</div>
-    <h1 class="profile-name">عبد الرحمن غزال</h1>
-    <p class="profile-title">مطور تطبيقات موبايل — Flutter Developer</p>
+    <h1 class="profile-name">Abd Alrhman Ghazal</h1>
+    <p class="profile-title">Mobile App Developer — Flutter Developer</p>
     <div class="social-btns">
       <a href="https://www.linkedin.com/in/abd-alrhman-ghzal-190549294" class="social-btn">💼 LinkedIn</a>
       <a href="https://github.com/Abd-ulrhman-Ghzal" class="social-btn">🐙 GitHub</a>
-      <a href="#contact" class="social-btn">✉️ تواصل معي</a>
+      <a href="#contact" class="social-btn">✉️ Contact Me</a>
     </div>
   </div>
 </header>
@@ -138,18 +137,18 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
-          <h2 class="section-title">نبذة <span>عني</span></h2>
-          <p class="section-subtitle">من أنا وماذا أقدم</p>
+          <h2 class="section-title">About <span>Me</span></h2>
+          <p class="section-subtitle">Who I am and what I offer</p>
           <p style="color:var(--text); font-size:0.95rem; margin-bottom:1.2rem;">
-            مطور تطبيقات موبايل متخصص في Flutter، أبني تطبيقات جوال أنيقة وسريعة تعمل بسلاسة على Android وiOS من قاعدة كود واحدة.
+            A mobile app developer specialized in Flutter, building elegant, fast apps that run smoothly on both Android and iOS from a single codebase.
           </p>
           <p style="color:var(--text-muted); font-size:0.92rem;">
-            أهتم ببناء بنية نظيفة وقابلة للصيانة (Clean Architecture)، وربط التطبيقات بواجهات REST API وقواعد بيانات Firebase، مع التركيز على تجربة مستخدم سلسة في كل شاشة.
+            I care about clean, maintainable architecture (Clean Architecture), connecting apps to REST APIs and Firebase, and delivering a smooth user experience on every screen.
           </p>
         </div>
         <div class="col-lg-6" id="skills">
-          <h2 class="section-title">المهارات <span>التقنية</span></h2>
-          <p class="section-subtitle">مستوى إتقاني لكل تقنية</p>
+          <h2 class="section-title">Technical <span>Skills</span></h2>
+          <p class="section-subtitle">My proficiency level in each technology</p>
           <div id="skillBars">
             <div class="skill-bar-wrap">
               <div class="skill-label"><span>Dart</span><span>95%</span></div>
@@ -184,8 +183,8 @@
   <!-- Projects -->
   <section class="section-gap" style="background:var(--light-bg);" id="projects">
     <div class="container">
-      <h2 class="section-title text-center">أبرز <span>المشاريع</span></h2>
-      <p class="section-subtitle text-center">تطبيقات Flutter طورتها في مسيرتي البرمجية</p>
+      <h2 class="section-title text-center">Featured <span>Projects</span></h2>
+      <p class="section-subtitle text-center">Flutter apps I've built throughout my career</p>
       <div id="projectsList"></div>
     </div>
   </section>
@@ -195,33 +194,33 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
-          <h2 class="section-title">المسيرة <span>المهنية</span></h2>
-          <p class="section-subtitle">خبراتي العملية</p>
+          <h2 class="section-title">Professional <span>Experience</span></h2>
+          <p class="section-subtitle">My work experience</p>
           <div class="timeline">
             <div class="tl-item">
               <div class="tl-dot"></div>
               <div class="tl-date">2022 — 2023</div>
-              <div class="tl-title">متدرب تطوير موبايل — ستارت أب ناشئة</div>
-              <div class="tl-sub">المشاركة في بناء تطبيقات Flutter وربطها بواجهات API.</div>
+              <div class="tl-title">Mobile Development Intern — Early-Stage Startup</div>
+              <div class="tl-sub">Helped build Flutter apps and connect them to backend APIs.</div>
             </div>
             <div class="tl-item">
               <div class="tl-dot"></div>
-              <div class="tl-date">2024 — حتى الآن</div>
-              <div class="tl-title">مستقل — Flutter Freelancer</div>
-              <div class="tl-sub">تنفيذ تطبيقات موبايل كاملة للعملاء، من التصميم إلى النشر على المتاجر.</div>
+              <div class="tl-date">2024 — Present</div>
+              <div class="tl-title">Freelance Flutter Developer</div>
+              <div class="tl-sub">Delivering complete mobile apps for clients, from design to app store release.</div>
             </div>
           </div>
         </div>
         <div class="col-lg-6" id="contact">
-          <h2 class="section-title">تواصل <span>معي</span></h2>
-          <p class="section-subtitle">يسعدني سماع أفكارك</p>
+          <h2 class="section-title">Contact <span>Me</span></h2>
+          <p class="section-subtitle">I'd love to hear your ideas</p>
           <div class="contact-info custom-card p-4">
             <div class="contact-item"><span class="ci-icon">📧</span><span>abdgh890@gmail.com</span></div>
-            <div class="contact-item"><span class="ci-icon">📱</span><span>338 94 9970 963+</span></div>
-            <div class="contact-item"><span class="ci-icon">📍</span><span>سوريا، دمشق</span></div>
+            <div class="contact-item"><span class="ci-icon">📱</span><span>+963 993 949 8338</span></div>
+            <div class="contact-item"><span class="ci-icon">📍</span><span>Damascus, Syria</span></div>
             <div class="contact-item"><span class="ci-icon">🌐</span><span>https://github.com/Abd-ulrhman-Ghzal</span></div>
             <div class="mt-3">
-              <button class="btn-primary-custom w-100" onclick="handleContact()">✉️ أرسل رسالة</button>
+              <button class="btn-primary-custom w-100" onclick="handleContact()">✉️ Send a Message</button>
             </div>
           </div>
         </div>
@@ -232,7 +231,7 @@
 
 <footer class="main-footer mt-auto">
   <div class="container">
-    <p>البورتفوليو الشخصي — مطور Flutter</p>
+    <p>Personal Portfolio — Flutter Developer</p>
   </div>
 </footer>
 
@@ -242,42 +241,39 @@
 initDarkMode();
 
 // ---- Projects Data (all Flutter) ----
-// "screenshot.image" is empty for now — set it to a real image path/URL
-// (e.g. 'assets/shop-app.png') and it will show inside the phone frame
-// automatically instead of the emoji placeholder.
 const projects = [
   {
-    title: 'تطبيق متجر إلكتروني',
-    desc: 'تطبيق تسوق متكامل يتيح للمستخدم تصفح المنتجات حسب الفئات ومشاهدة أكثرها مبيعاً في الصفحة الرئيسية، مع بطاقات منتج تعرض الصورة والسعر وسنة الإصدار بتصميم نظيف وسهل القراءة. يدعم التطبيق سلة تسوق تفاعلية كاملة (إضافة، حذف، تعديل الكمية) وتنقلاً سلساً بين الشاشات عبر شريط تنقل سفلي، مع بنية كود مقسمة على طبقات (Presentation / Domain / Data) باستخدام GetX لإدارة الحالة، مما يسهّل الصيانة والتوسع مستقبلاً.',
+    title: 'E-commerce App',
+    desc: 'A complete shopping app that lets users browse products by category and see best-sellers on the home screen, with product cards showing the image, price, and release year in a clean, easy-to-read layout. The app supports a fully interactive cart (add, remove, adjust quantity) and smooth navigation between screens via a bottom nav bar, with code organized into layers (Presentation / Domain / Data) using GetX for state management — making the app easier to maintain and extend.',
     features: [
-      'تصفح المنتجات وعرض الأكثر مبيعاً',
-      'سلة تسوق تفاعلية مع تعديل الكمية',
-      'بطاقات منتج تعرض السعر والسنة',
-      'شريط تنقل سفلي بين الرئيسية والسلة والحساب'
+      'Browse products and see best-sellers',
+      'Interactive cart with quantity adjustment',
+      'Product cards showing price and release year',
+      'Bottom nav bar for Home, Cart, and Account'
     ],
     tags: ['Dart','Flutter','GetX','Clean Architecture'],
     screenshot: { image: 'assets/ecommerce-app.png', emoji: '🛒', bg: '#f5f3ff' }
   },
   {
-    title: 'تطبيق حجز مواعيد — Health Slot',
-    desc: 'تطبيق حجز مواعيد طبية باسم Health Slot، يمنح المستخدم واجهة ترحيبية بسيطة توضّح الخدمات الأساسية: متابعة الحالة الصحية، البحث عن أطباء، وحجز المواعيد. يتيح التطبيق للمريض اختيار التخصص والطبيب المناسب وحجز الموعد المتاح مباشرة، إضافة إلى متابعة نتائج التحاليل المخبرية داخل التطبيق نفسه دون الحاجة للتنقل بين تطبيقات متعددة. تم بناء إدارة الحالة باستخدام Bloc لضمان فصل واضح بين منطق العمل والواجهة، مع ربط كامل مع REST API لجلب بيانات الأطباء والمواعيد بشكل حي.',
+    title: 'Appointment Booking App — Health Slot',
+    desc: 'A medical appointment booking app called Health Slot, with a simple welcome screen highlighting its core services: tracking your health, finding doctors, and booking appointments. Patients can choose the right specialty and doctor, book an available slot instantly, and even check lab results inside the app itself — no need to switch between multiple apps. State management was built with Bloc to keep a clear separation between business logic and UI, fully connected to a REST API for live doctor and appointment data.',
     features: [
-      'بحث عن أطباء حسب التخصص',
-      'حجز المواعيد المتاحة مباشرة',
-      'متابعة نتائج التحاليل داخل التطبيق',
-      'دعم تعدد اللغات عبر زر تغيير اللغة'
+      'Search for doctors by specialty',
+      'Book available appointment slots instantly',
+      'Track lab results inside the app',
+      'Multi-language support via a language switcher'
     ],
     tags: ['Dart','Flutter','API integration','Bloc'],
     screenshot: { image: 'assets/health-slot.png', emoji: '📅', bg: '#f0f9ff' }
   },
   {
-    title: 'تطبيق الطقس',
-    desc: 'تطبيق طقس أنيق يعرض حالة الطقس الحالية لموقع المستخدم مع درجة الحرارة والوصف النصي للحالة (كالعواصف الرعدية أو الأجواء الصحوة)، إضافة إلى وقتي الشروق والغروب ودرجتي الحرارة العظمى والصغرى لليوم. تم ربط التطبيق بواجهة برمجية خارجية لجلب بيانات الطقس وتحديثها تلقائياً بحسب موقع المستخدم، مع تصميم داكن مريح للعين تبرز فيه الأيقونات الحية للحالة الجوية.',
+    title: 'Weather App',
+    desc: "A sleek weather app that shows the current weather for the user's location, including temperature and a text description of the conditions (like thunderstorms or clear skies), plus sunrise and sunset times and the day's high and low temperatures. The app connects to an external weather API to fetch and auto-update data based on the user's location, with a dark, easy-on-the-eyes design that makes the live weather icons stand out.",
     features: [
-      'عرض درجة الحرارة الحالية ووصف الحالة الجوية',
-      'أوقات الشروق والغروب',
-      'درجتا الحرارة العظمى والصغرى لليوم',
-      'تحديد الموقع تلقائياً عبر Geolocation'
+      'Current temperature and weather description',
+      'Sunrise and sunset times',
+      "Today's high and low temperatures",
+      'Automatic location detection via Geolocation'
     ],
     tags: ['Dart','Flutter','Weather API','Geolocation'],
     screenshot: { image: 'assets/weather-app.png', emoji: '🌦️', bg: '#1e1b3a' }
@@ -320,8 +316,8 @@ observer.observe(document.getElementById('skillBars'));
 
 // ---- Contact button: open mail client directly (single-page site, no separate form page) ----
 function handleContact() {
-  showToast('✅ جارٍ فتح تطبيق البريد...');
-  window.location.href = 'mailto:abdgh890@gmail.com?subject=تواصل من البورتفوليو';
+  showToast('✅ Opening your mail app...');
+  window.location.href = 'mailto:abdgh890@gmail.com?subject=Contact from Portfolio';
 }
 </script>
 </body>

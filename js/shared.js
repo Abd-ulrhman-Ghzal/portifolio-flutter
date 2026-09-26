@@ -31,7 +31,7 @@ function initDarkMode() {
   });
 }
 function updateToggleLabel(btn) {
-  btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ وضع فاتح' : '🌙 وضع داكن';
+  btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
 }
 
 // Persist dark mode on page load
@@ -41,8 +41,7 @@ function updateToggleLabel(btn) {
   }
 })();
 
-// Active nav-link on scroll — replaces the old per-page "active" class
-// now that navigation is anchor links within one page (index.html).
+// Active nav-link on scroll — highlights the current section as you scroll.
 function initScrollSpy() {
   const links = document.querySelectorAll('.main-navbar .nav-link[href^="#"]');
   if (!links.length) return;
